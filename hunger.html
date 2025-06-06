@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DonAid - Hungers</title>
+  <link href="hungerstyle.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="DonAid Logo" />
+      <h1>DonAid</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Us</a>
+      <a href="hunger.html">Hungers</a>
+      <a href="donor.html">Donors</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Request Food Assistance</h2>
+    <p>
+      If you or someone you know is in need of food assistance, please fill out the form below. We will connect you with nearby donors and NGOs to provide timely help.
+    </p>
+     <div class="form-container">
+    <form id="hungerRequestForm">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" required placeholder="Your email address" />
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" required placeholder="Your phone number" pattern="[0-9]{10}" title="Enter 10-digit phone number" />
+
+      <label for="location">Location *</label>
+      <input type="text" id="location" name="location" required placeholder="Your area or city" />
+
+      <label for="details">Additional Details</label>
+      <textarea id="details" name="details" placeholder="Describe your needs or situation"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 DonAid. All rights reserved.
+  </footer>
+
+  <script>
+    const form = document.getElementById('hungerRequestForm');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Simple validation passed by required attributes and pattern
+      alert('Thank you for submitting your request. Our team will get in touch with you shortly.');
+
+      // Here you can add code to send form data to your backend/server
+
+      form.reset();
+    });
+  </script>
+</body>
+</html>

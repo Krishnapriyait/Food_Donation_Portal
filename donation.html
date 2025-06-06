@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DonAid - Food Donation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #fffef7, #fefae0);
+      color: #333;
+    }
+    header {
+      background-color: #6a994e;
+      padding: 20px 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
+    .logo h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      gap: 30px;
+    }
+    .cause-box, .donate-box, .recommend-box {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      flex: 1;
+    }
+    .donate-box {
+      flex: 2;
+    }
+    h2 {
+      color: #6a994e;
+      margin-bottom: 15px;
+    }
+    .cause-box img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .cause-box p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    input {
+      flex: 1 1 45%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 2px solid #6a994e;
+      font-size: 14px;
+    }
+    input[type="date"] {
+      font-family: inherit;
+    }
+    .donate-box button {
+      background-color: #2196f3;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .donate-box button:hover {
+      background-color: #1a78c2;
+    }
+    .recommend-box img {
+      height: 50px;
+      width: 50px;
+      border-radius: 8px;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+    .recommend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      background-color: #f0fdf4;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .recommend-text {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #d4d4d4;
+      color: #333;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="DonAid Logo" />
+      <h1>DonAid</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Us</a>
+      <a href="hunger.html">Hungers</a>
+      <a href="donor.html">Donors</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="cause-box">
+      <h2>Causes Details</h2>
+      <img src="logo.jpg" alt="Food Donation">
+      <p><strong>Food Pack</strong> ₹100 / Person</p>
+      <p>Your donation of a food packet helps feed individuals and families in urgent need. Each food pack includes essential items like rice, pulses, oil, and vegetables. Your kindness brings hope and nourishment to the hungry.</p>
+    </div>
+
+    <div class="donate-box">
+      <h2>Donate For Food Pack</h2>
+      <form onsubmit="return showAlert()">
+        <input type="text" placeholder="Donor Name*" required>
+        <input type="email" placeholder="Email address*" required>
+        <input type="tel" placeholder="Phone *" required>
+        <input type="date" value="2025-06-07" required>
+        <input type="text" placeholder="Total Donation">
+        <input type="text" placeholder="Name of Parcel" required>
+        <input type="number" placeholder="Count" required>
+        <input type="text" placeholder="Total Amount" required>
+        <button type="submit">DONATE NOW</button>
+      </form>
+    </div>
+
+    <div class="recommend-box">
+      <h2>Recommended Causes</h2>
+      <div class="recommend-item">
+        <img src="water.jpg" alt="Water Bottles">
+        <div class="recommend-text">Water Bottles ₹20 / Person</div>
+      </div>
+      <div class="recommend-item">
+        <img src="snack.jpg" alt="Snacks Pack">
+        <div class="recommend-text">Snacks Pack ₹50 / Kit</div>
+      </div>
+      <div class="recommend-item">
+        <img src="familykit.jpg" alt="Family Kit">
+        <div class="recommend-text">Family Food Kit ₹250 / Family</div>
+      </div>
+      <div class="recommend-item">
+        <img src="breakfast.jpg" alt="Breakfast">
+        <div class="recommend-text">Breakfast ₹30 / Person</div>
+      </div>
+      <div class="recommend-item">
+        <img src="fruitpack.jpg" alt="Fruit Pack">
+        <div class="recommend-text">Fruit Pack ₹60 / Child</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 DonAid. All rights reserved.
+  </footer>
+
+  <script>
+    function showAlert() {
+      alert("Thank you for your generous donation! Your food parcel will help someone in need.");
+      return false;
+    }
+  </script>
+</body>
+</html>
